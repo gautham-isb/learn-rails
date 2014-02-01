@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
 		if @contact.valid? 
 			@contact.update_spreadsheet
 			flash[:notice] = "Thank you for your message." 
-			redirect_to root_path
+			redirect_to new_contact_path
 		else
 			render :new
 		end
